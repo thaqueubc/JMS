@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+
+// Imports files
+
+// Utility Imports
+@import 'variables';
+@import 'mixins';
+
+// Resets and Defaults
+@import 'reset';
+@import 'typography';
+
+// Site Sections
+@import 'body';
+@import 'wrapper';
+@import '_header';
+@import '_main';
+@import 'main_outline'; // style for main section of outline page
+@import 'contact-form';
+
+//footer style
+@import '_footer'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

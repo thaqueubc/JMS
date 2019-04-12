@@ -1,0 +1,33 @@
+// Typography Styles
+body {
+    font-family: $body-font;
+    line-height: $line-height;
+}
+
+h1, h2, h3, nav a, table {
+    font-family: $heading-font;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+h1{
+    font-size: 2em; 
+    text-shadow: 10px 10px 10px #363636;
+}
+
+p{
+    text-align: justify;
+    font-size: 1.3em;
+}
+
+// Media Query Breakpoints
+$desktopMedium: em(1250);
+$tabletLandscape: em(1024);
+$tabletPortrait: em(850);
+$phoneLandscape: em(670);
+$phonePortrait: em(420);
+
+// Utility variables
+$link-hover-selector: '&:hover, &:focus, &:active';

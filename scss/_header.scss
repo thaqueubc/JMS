@@ -1,0 +1,176 @@
+//header style
+header{   
+    height: 80px;
+    padding: 0;
+    display: flex;
+    background: $navbar-color;
+
+    div {    
+        flex: 1 1 20%;
+        h1{
+            margin: 0 auto;
+            padding: 0;
+          
+            a{
+                color: $text-color-light;
+                text-align: center;
+                font-size: 1.9em;
+                text-shadow: 10px 10px 10px #363636;
+                text-decoration: none;
+            }
+            
+        }
+   
+        .menu-btn{
+            display: none;
+        }
+    }
+
+
+    nav{
+        flex: 1 1 80%;
+        padding: 5px;
+        margin-right: 20px;
+        ul{
+            display: flex;
+            justify-content: flex-end;
+            @include display_ul;
+            li{
+                a{
+                    color: $text-color-light;
+                    font-size: 1.2em;
+                    padding: 10px;
+                    margin: 0 10px;
+                    font-weight: bold;
+                }
+        }
+        }
+    a{
+        #{$link-hover-selector} {
+            background-color: rgba(lightblue, 0.3);
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+        
+
+    }
+
+    @media (max-width:  750px){
+
+    flex-wrap: wrap;
+
+    .show & {
+        height: auto;
+        width: 100%;
+    }
+
+    div{
+        display: flex;
+       
+        h1{
+            flex:1 1 80%;
+            text-align: left;
+            padding: 5px 10px;
+            margin: 0 auto;
+        }
+
+        .menu-btn{
+            flex: 1 1 20%;
+            display: inline-block; 
+            background-color: transparent;
+            border: none;
+            padding-right: 10px;
+            cursor: pointer; 
+
+          //animated menu bar code idea is taken from w3School
+            .bar1 ,
+            .bar2 , 
+            .bar3 {
+                width: 50px;
+                height: 5px;
+                background-color: white;
+                margin: 6px 0;
+                transition: 0.4s;
+              }
+
+            .bar1{
+                .show &{
+                    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+                    transform: rotate(-45deg) translate(-9px, 6px);
+                }
+            }
+
+            .bar2{
+                .show &{
+                    opacity: 0;
+                }
+            }
+
+            .bar3{
+                .show &{
+                    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                    transform: rotate(45deg) translate(-8px, -8px);
+                }
+            }
+
+        }      
+    }   
+
+    nav {
+        display: none;
+        margin: 5px;
+       
+    .show & {
+        display: flex;
+        justify-content: flex-end; 
+        height: auto;;
+        width: 100%;
+        background-color: $wrapper-bg-color;
+        margin: 0 auto;
+        padding: 0;
+        cursor: pointer;
+        border: 1px solid white;
+
+        ul {
+            background: $navbar-color;
+            display: block;
+            margin: 0;
+            padding: 5px;
+            width: 25%;
+            li{
+                text-align: right;
+                border-bottom: 1px solid white;
+                margin: 5px 0;
+                a{
+                    padding: 5px 0;
+                    text-align: center;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+    } 
+
+   
+}
+
+@media (max-width:  550px){
+   .menu-btn{
+       padding-top: 12px;
+   }
+   nav{
+        .show & {
+            justify-content: center;
+            ul{
+                width: 100%;
+                li{
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+}
+        
+}

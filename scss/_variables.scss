@@ -1,0 +1,25 @@
+// Colors
+$body-bg-color: #303030;
+$wrapper-bg-color: antiquewhite;
+// Text Colors
+$text-color-dark: black;
+$text-color-light: white;
+$navbar-color: linear-gradient(to right, rgba(75,199,237,1) 22%,rgba(73,155,234,1) 64%,rgba(32,124,229,1) 89%);
+
+// Fonts
+$body-font: Georgia, Times, Times New Roman, serif;
+$heading-font: Tahoma, Verdana, Segoe, sans-serif;
+
+// Typographic Defualts
+$line-height: 1.2;
+
+// Layout variables
+$padding: 30px;
+$padding_footer: 10px;
+
+$link-hover-selector: '&:hover, &:focus, &:active';
+
+// Media Query Breakpoints
+$desktop: em(1250);
+$tablet: em(1024);
+$phone: em(750);

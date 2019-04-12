@@ -1,0 +1,58 @@
+// Footer Styles
+footer {
+    border-top: 1px dotted $body-bg-color;
+    background: $navbar-color;
+    color: $text-color-light;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "div1 div2 div3";
+
+    .div{
+        padding:0 20px;
+        @include display_ul;
+        h2{
+            font-size: 1.2em;
+        }
+        ul{
+           li{
+                a{
+                    font-size: 0.9em; 
+                    line-height: 1;
+                }
+           } 
+        }
+    }
+
+    .div1{
+        grid-area: div1;
+    }
+
+    .div2{
+        grid-area: div2;
+    }
+
+    .div3{
+        grid-area: div3;
+    }
+
+
+    @media (max-width:  750px) {
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "div1 div2"
+                             "div3 div3";
+        
+    }
+
+    @media (max-width:  500px) {
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "div1"
+                             "div2"
+                             "div3";
+        
+    }
+  
+}
