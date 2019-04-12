@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>COMP-1950 Homepage</title>
+    <title>JMS Engineering Ltd</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
 </head>
 
 <body>
 <div class="wrapper">
 <header>
     <div class="top-row">
-            <h1><a href="index.html">BCIT</a></h1> 
+            <a href="index.html">
+                <img src="image/logo.jpg"  class="logo" alt="company logo">
+            </a>
 
             <div class="menu-btn" id="menu-btn">
                 <div class="bar1"></div>
@@ -22,11 +33,16 @@
     </div>                   
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="outline.html">Outline</a></li>
-            <li><a href="#0">Schedule</a></li>
-            <li><a href="#0">Lessons</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#" aria-haspopup="true">Company</a>
+                <ul class="dropdown">
+                    <li><a href="#0">History</a></li>
+                    <li><a href="#0">Team </a></li>
+                    <li><a href="#0">Testimonials</a></li>
+                </ul>
+            </li>
+            <li><a href="#0">Services</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
     
@@ -34,97 +50,23 @@
             
 <main>
 
-<!--This part is taken from Cycle2-->
-    <div class="cycle-slideshow" 
-        data-cycle-prev="#prev"
-        data-cycle-next="#next">
 
-        <img src="image/bcit-campuss1.jpg" alt="BCIT campus">
-        <img src="image/bcit-campuss2.jpg" alt="BCIT campus">
-        <img src="image/bcit-campuss3.jpg" alt="BCIT campus">
-   </div>
-
-   <button id="prev" class="btn-prev">&lt;&lt; Prev</button>
-   <button id="next" class="btn-next">Next &gt;&gt;</button>
-
-   <section class="container">
-     <div class="about">
-         <h2>Web Design and Development 2 </h2>
-         <p>This Course builds on the knowledge from COMP-1850 with an emphasis on the responsive 
-             design with up to date HTML and CSS design technologies and Learn Sass, Git, GitHub 
-             and much more.
-         </p>
-     </div>
-     <div class="benefit">
-         <h2>96% of BCIT Grads are employed</h2>
-         <p>Prepare yourself for a career in web. Take one course, or apply this course to a part-time certificate.
-            Work at your own pace,in the evenings or weekends. A Flexible schedule that fits your lifestyle.</p>
-     </div>
-     <div class="bcit">
-         <h2>The BCIT Advantages</h2>
-         <ul>
-             <li>Small Class Sizes</li>
-             <li>Hands On Learning...Every Class</li>
-             <li>Taught By Industry Professionals</li>
-             <li>Work In a Team To Create a Functional Website</li>
-         </ul>
-     </div>
-     <div class="comp">
-         <h2>COMP-1950</h2>
-         <p>Prerequisite(s): <br>
-            COMP 1850 or equivalent HTML5 and CSS3 knowledge.
-         </p>
-
-         <p>Credit(s): 3 <br>
-            Cost:  $448.00-$457.0
-         </p>
-
-     </div>
-   </section>
 
 
 </main>
             
 <footer>   
-    <div class="div div1">
-        <h2> Connect With Us</h2>
-        <ul>
-            <li>Attend an info session</li>
-            <li>Connect with an advisor</li>
-            <li>Register for course</li>
-            <li>Apply for a program </li>
-        </ul>
-    </div>
-
-    <div class="div div2">
-        <h2> Information For Students</h2>
-        <ul>
-            <li> Prospective Student</li>
-            <li> Part-time Student</li>
-            <li> International Student</li>
-            <li> Current Student</li>
-        </ul>
-    </div>
-
-    <div class="div div3">
-        <h2> Address </h2>
-        <ul>
-            <li>British Columbia Institute of Technology</li>
-            <li>3700 Willingdon Avenue</li>
-            <li>Burnaby, British Columbia</li>
-            <li>Canada V5H 3H2</li>
-        </ul>
-
-    </div>
+   
 </footer>
 </div>
+
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous">
 </script>
 
-<script src="./scripts/menu.js"></script>
+<script src="./scripts/dropdown_menu.js"></script>
 <script src="./scripts/jquery.cycle2.min.js"></script>
 </body>
 
