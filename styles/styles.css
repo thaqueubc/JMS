@@ -35,81 +35,88 @@ body {
 
 .wrapper {
   height: 100%;
-  max-width: 1200px;
   min-height: 100vh;
   background-color: antiquewhite;
   position: relative;
   margin: 0 auto; }
 
 header {
-  height: 130px;
+  height: 145px;
   padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #4bc7ed 22%, #499bea 64%, #207ce5 89%); }
-  header div a .logo {
-    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.25);
+  background: linear-gradient(to right, #4bc7ed 22%, #499bea 64%, #207ce5 89%);
+  padding: 5px;
+  margin-right: 20px; }
+  header a .logo {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
     border-radius: 10%;
-    background-color: white;
-    padding: 0 30px;
+    background-color: black;
+    border: 10px double white;
+    padding: 0 10px;
     position: relative;
     z-index: 900;
     margin-left: 20px;
     align-items: center; }
-  header div .menu-btn {
+  header button.menu {
     display: none; }
-  header nav {
-    padding: 5px;
-    margin-right: 20px; }
-    header nav ul {
-      display: flex;
-      justify-content: flex-end; }
-      header nav ul li {
-        list-style: none; }
-        header nav ul li a {
-          text-decoration: none;
-          outline: none; }
-      header nav ul li {
-        flex: 1;
-        position: relative; }
-        header nav ul li a {
-          color: white;
-          font-size: 1.3em;
-          padding: 10px;
-          margin: 0 10px;
-          font-weight: bold;
-          display: block;
-          white-space: nowrap; }
-        header nav ul li a[aria-haspopup="true"]::after {
-          content: '';
-          display: block;
-          width: 0px;
-          height: 0px;
-          position: absolute;
-          border-left: 8px solid transparent;
-          border-right: 8px solid transparent;
-          border-top: 8px solid white;
-          left: calc(50%);
-          right: auto;
-          bottom: 10px;
-          top: calc(99%); }
-        header nav ul li ul {
-          display: block;
-          position: absolute;
-          top: calc(100% + 5px);
-          left: 0;
-          margin-top: 28px;
-          background: linear-gradient(to right, #4bc7ed 22%, #499bea 64%, #207ce5 89%);
-          min-width: 100%;
-          height: 0;
-          overflow: hidden; }
-        header nav ul li:hover ul, header nav ul li.hover ul {
-          height: auto; }
-    header nav a:hover, header nav a:focus, header nav a:active {
-      background-color: rgba(173, 216, 230, 0.3);
-      width: 100%;
-      border-radius: 10px; }
+  header ul {
+    display: flex;
+    justify-content: flex-end; }
+    header ul li {
+      list-style: none; }
+      header ul li a {
+        text-decoration: none;
+        outline: none; }
+    header ul li {
+      flex: 1;
+      position: relative; }
+      header ul li a {
+        color: white;
+        font-size: 1.3em;
+        text-align: center;
+        padding: 10px;
+        margin: 0 10px;
+        font-weight: bold;
+        display: block;
+        white-space: nowrap; }
+      header ul li a[aria-haspopup="true"]::after {
+        content: '';
+        display: block;
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid white;
+        left: calc(50%);
+        right: auto;
+        bottom: 0px;
+        top: calc(100% + 8px); }
+      header ul li ul {
+        display: block;
+        position: absolute;
+        left: 0;
+        margin-top: 25px;
+        padding: 0;
+        background: linear-gradient(to right, #4bc7ed 22%, #499bea 64%, #207ce5 89%);
+        min-width: 100%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 10px; }
+        header ul li ul li {
+          width: 100%;
+          margin: 0; }
+          header ul li ul li a {
+            margin: 0;
+            border-bottom: 1px solid white; }
+      header ul li:hover ul, header ul li.hover ul {
+        height: auto; }
+  header a:hover, header a:focus, header a:active {
+    background-color: rgba(173, 216, 230, 0.3);
+    width: 100%;
+    border-radius: 10px; }
   @media (max-width: 750px) {
     header {
       flex-wrap: wrap; }
@@ -117,14 +124,18 @@ header {
         height: auto;
         width: 100%; }
       header div {
+        flex: 1;
         display: flex; }
-        header div h1 {
-          flex: 1 1 80%;
-          text-align: left;
-          padding: 5px 10px;
-          margin: 0 auto; }
+        header div a {
+          flex: 1;
+          border: 1px solid red; }
+          header div a .logo {
+            text-align: left;
+            padding: 5px 10px;
+            margin: 0 auto; }
         header div .menu-btn {
-          flex: 1 1 20%;
+          border: 1px solid red;
+          flex: 1;
           display: inline-block;
           background-color: transparent;
           border: none;
